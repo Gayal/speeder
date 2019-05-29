@@ -1,0 +1,7 @@
+<resources>
+    <string name="Speeder">Speeder</string>
+
+    <string name="title_activity_splash">"speedeo"</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
