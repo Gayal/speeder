@@ -4,24 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical"
     tools:context="test.siaxe.speedeo.Speedmeteractivity">
 
     <TextView
+        android:id="@+id/textViewSpeed"
         android:layout_width="wrap_content"
-        android:text="00"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:text="00"
+        android:textColor="@color/color_blue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedView" />
+
+    <com.github.anastr.speedviewlib.SpeedView
+        android:id="@+id/speedView"
+        android:layout_width="wrap_content"
+        app:sv_withTremble="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/textViewSpeed"
-        android:textColor="@color/color_blue"/>
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:text="KM/h"
+        android:visibility="gone"
         android:layout_height="wrap_content"
         android:gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +47,47 @@
         android:id="@+id/textViewkmh"
         android:textColor="@color/color_blue"/>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Please move your device to indicate speed"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/speedView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:text="Detail View"
+        android:background="#3D50FA"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <!--    <com.google.android.gms.ads.AdView-->
+<!--        android:id="@+id/adView1"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="2dp"-->
+<!--        android:layout_marginEnd="2dp"-->
+<!--        android:layout_marginBottom="2dp"-->
+<!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--        ads:adSize="BANNER"-->
+<!--        ads:adUnitId="ca-app-pub-8437553700245733/8896608700"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    test addUnitID-->
+<!--   ads:adUnitId="ca-app-pub-7513678790415998/8129294277"-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

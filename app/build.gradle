@@ -1,7 +1,10 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
 
     signingConfigs {
         Speeder {
@@ -16,9 +19,9 @@ android {
     defaultConfig {
         applicationId "test.siaxe.speedeo"
         minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 2
-        versionName "1.0.1"
+        targetSdkVersion 29
+        versionCode 7
+        versionName "1.0.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -43,32 +46,47 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('androidx.test.espresso:espresso-core:3.1.0-alpha4', {
+    implementation 'com.google.firebase:firebase-ads:20.2.0'
+    implementation 'com.google.firebase:firebase-analytics:19.0.0'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.firebase:firebase-crashlytics:18.0.1'
+    implementation 'com.google.android.gms:play-services-ads:20.2.0'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.android.material:material:1.3.0'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.4.0-beta02', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
-    implementation 'com.google.android.gms:play-services:10.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
-    testCompile 'junit:junit:4.12'
+    implementation 'androidx.appcompat:appcompat:1.4.0-alpha02'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
 
 
 //     Rx location Permission
     implementation 'com.patloew.rxlocation:rxlocation:1.0.5'
 
 //    rx
-    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
-    implementation 'com.jakewharton.rxbinding2:rxbinding-support-v4:2.0.0'
-    implementation 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7:2.0.0'
-    implementation 'com.jakewharton.rxbinding2:rxbinding-design:2.0.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.2.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding-support-v4:2.2.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7:2.2.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding-design:2.2.0'
 
 
 //    easy permission for location
-    implementation 'pub.devrel:easypermissions:2.0.1'
+    implementation 'pub.devrel:easypermissions:3.0.0'
 
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+//    meter
+    implementation 'com.github.anastr:speedviewlib:1.5.5'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
 
+//    add sdk
 
 }
+
+
+

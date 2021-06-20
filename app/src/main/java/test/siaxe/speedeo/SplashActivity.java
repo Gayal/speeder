@@ -1,17 +1,12 @@
 package test.siaxe.speedeo;
 
-import android.app.AlertDialog;
 import android.content.ContentResolver;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.LocationManager;
-import android.provider.Settings;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.WindowManager;
-import android.widget.Toast;
+import android.provider.Settings;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.

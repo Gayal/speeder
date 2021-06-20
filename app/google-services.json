@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "58495615684",
+    "project_id": "speeder-f8bb5",
+    "storage_bucket": "speeder-f8bb5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58495615684:android:f639bf46cb3338469c3f91",
+        "android_client_info": {
+          "package_name": "test.siaxe.speedeo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58495615684-vicprjps6bl79sjfis40vjkigphcnfll.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRpXXlY49x8fZl_Sb1Qed3qzOvQXAR4k8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58495615684-vicprjps6bl79sjfis40vjkigphcnfll.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
